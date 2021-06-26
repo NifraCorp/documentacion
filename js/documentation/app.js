@@ -9,6 +9,14 @@ import { teams } from './teams.js';
 import { axies } from './axies.js';
 
 const main = document.querySelector('main');
+const btnGeneralR = document.getElementById('btn-general-r');
+const btnTareasR = document.getElementById('btn-tareas-r');
+const btnAventuraR = document.getElementById('btn-aventura-r');
+const btnArenaR = document.getElementById('btn-arena-r');
+const btnEnergiaR = document.getElementById('btn-energia-r');
+const btnTeamsR = document.getElementById('btn-teams-r');
+const btnAxiesR = document.getElementById('btn-axies-r');
+
 const btnGeneral = document.getElementById('btn-general');
 const btnTareas = document.getElementById('btn-tareas');
 const btnAventura = document.getElementById('btn-aventura');
@@ -31,6 +39,43 @@ function listeners() {
         desplegarMenu()
     })
 
+
+    btnGeneralR.addEventListener('click', e => {
+        general(main)
+        reiniciarClickedR(e.target)
+    })
+
+    btnTareasR.addEventListener('click', e => {
+        tareas(main)
+        reiniciarClickedR(e.target)
+    })
+
+    btnAventuraR.addEventListener('click', e => {
+        aventura(main)
+        reiniciarClickedR(e.target)
+    })
+
+    btnArenaR.addEventListener('click', e => {
+        arena(main)
+        reiniciarClickedR(e.target)
+    })
+
+    btnEnergiaR.addEventListener('click', e => {
+        energia(main);
+        reiniciarClickedR(e.target)
+    })
+
+    btnTeamsR.addEventListener('click', e => {
+        teams(main);
+        reiniciarClickedR(e.target)
+    })
+
+    btnAxiesR.addEventListener('click', e => {
+        axies(main);
+        reiniciarClickedR(e.target)
+    })
+
+    /* Division */
 
     btnGeneral.addEventListener('click', e => {
         general(main)
@@ -70,7 +115,17 @@ function listeners() {
 
 
     
+function reiniciarClickedR(target) {
+    btnGeneralR.classList.remove('btn-clicked');
+    btnTareasR.classList.remove('btn-clicked');
+    btnAventuraR.classList.remove('btn-clicked');
+    btnArenaR.classList.remove('btn-clicked');
+    btnEnergiaR.classList.remove('btn-clicked');
+    btnTeamsR.classList.remove('btn-clicked');
+    btnAxiesR.classList.remove('btn-clicked');
 
+    target.classList.add('btn-clicked')
+}
 
 function reiniciarClicked(target) {
     btnGeneral.classList.remove('btn-clicked');
@@ -83,6 +138,7 @@ function reiniciarClicked(target) {
 
     target.classList.add('btn-clicked')
 }
+
 
 function desplegarMenu() {
     const menuDesplegable = document.querySelector('.box-btn-nav-responsive');
