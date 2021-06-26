@@ -125,6 +125,7 @@ function reiniciarClickedR(target) {
     btnAxiesR.classList.remove('btn-clicked');
 
     target.classList.add('btn-clicked')
+    desplegarMenu()
 }
 
 function reiniciarClicked(target) {
