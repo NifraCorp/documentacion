@@ -1,1 +1,1 @@
-export const password = 'nifracorp159'
+export const password = 'ingreso159'
