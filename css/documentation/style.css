@@ -152,6 +152,26 @@ main {
     text-align: justify;
 }
 
+.box-presentacion {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.presentacion {
+    font-size: 40px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.p-presentacion {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
 a {
     color:#fda400;
     text-decoration: none;
